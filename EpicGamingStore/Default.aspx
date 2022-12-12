@@ -2,4 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
+        <ItemTemplate>
+            <asp:Label ID="NomeProdotto" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
+            <asp:Label ID="CategoriaProdotto" runat="server" Text="<%# Item.NomeCategoria %>"></asp:Label> <br />
+            <asp:Label ID="Data" runat="server" Text="<%# Item.DataRilascio %>"></asp:Label>
+        </ItemTemplate>
+    </asp:Repeater>
 </asp:Content>
