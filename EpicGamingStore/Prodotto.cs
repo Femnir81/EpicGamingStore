@@ -50,7 +50,7 @@ namespace EpicGamingStore
             else {
                 command.CommandText = $"Select *, NomeCategoria from ProdottiTab" +
                     $" inner join CategorieTab on ProdottiTab.IDCategoria = CategorieTab.IDCategoria" +
-                    $"where IDCategoria == {categoria}";
+                    $" where ProdottiTab.IDCategoria = {categoria}";
             }
             
             command.Connection= con;
