@@ -15,10 +15,18 @@ namespace EpicGamingStore
             {
                 Prodotto.getInventory(0).Clear();
                 Prodotto.getInventory(0);
+
+                Categoria.getCategories().Clear();
+                Categoria.getCategories();
                 
             }
             Repeater1.DataSource = Prodotto.getInventory(0);
             Repeater1.DataBind();
+
+            RepeaterCat.DataSource = Categoria.getCategories();
+            RepeaterCat.DataBind();
         }
+
+        
     }
 }

@@ -114,7 +114,7 @@ namespace EpicGamingStore
         protected global::System.Web.UI.WebControls.Image gallery2;
 
         /// <summary>
-        /// Controllo gallery3.
+        /// Controllo iframe.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
@@ -123,7 +123,7 @@ namespace EpicGamingStore
         protected global::System.Web.UI.WebControls.Image gallery3;
 
         /// <summary>
-        /// Controllo gallery4.
+        /// Controllo gallery3.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
@@ -132,7 +132,7 @@ namespace EpicGamingStore
         protected global::System.Web.UI.WebControls.Image gallery4;
 
         /// <summary>
-        /// Controllo iframe.
+        /// Controllo gallery4.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.

@@ -42,7 +42,9 @@
                         <asp:Image ID="gallery2" CssClass="d-block w-50" runat="server" />
                     </div>
                     <div>
-                        <asp:Image ID="gallery3" CssClass="d-block w-50" runat="server" />
+                        <iframe width="560" height="315" id="iframe" runat="server"  title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen="true"></iframe>
                     </div>
                     <div>
                         <asp:Image ID="gallery4" CssClass="d-block w-50" runat="server" />

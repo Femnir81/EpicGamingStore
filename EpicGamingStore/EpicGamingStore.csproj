@@ -130,6 +130,7 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Categoria.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
