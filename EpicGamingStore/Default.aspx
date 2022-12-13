@@ -110,21 +110,30 @@
         <div class="col-lg-6 mx-auto">
             
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+               <%-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>--%>
+                <asp:Repeater ID="RepeaterCat" runat="server" ItemType="EpicGamingStore.Categoria">
+                    <ItemTemplate>
+                        <a href="ProductByCategory?idcat=<%# Item.IDCategoria %>" class="btn btn-primary btn-sm px-4 gap-3" role="button">
+
+                            <%# Item.NomeCategoria  %>
+                        </a>
+                        
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
     </div>
-    <div class="d-flex container-fluid justify-content-star promo py-5 flex-wrap">
+    <div class="d-flex container-fluid promo py-5 flex-wrap">
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
-                <div class="productCard glass-object m-3">
-                    <div class="productImg rounded-2">
+                <div class="productCard glass-object m-2 ">
+                    <div class="productImg rounded-2" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')">
                         <div class="glass-object productDesc p-2">
                             <div>
                                 <asp:Label ID="Label1" CssClass="mb-1" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label>
