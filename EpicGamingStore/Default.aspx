@@ -1,28 +1,146 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EpicGamingStore.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <asp:Repeater ID="RepeaterCat" runat="server" ItemType="EpicGamingStore.Categoria">
-        <ItemTemplate>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/img/copertina/spMoralesCover.jpg" alt="Alternate Text" />
 
-             <a href="ProductByCategory.aspx?idcat=<%# Item.IDCategoria %>" class="btn btn-primary" role="button"><%# Item.NomeCategoria %></a> <br />
+                <div class="container">
+                    <div class="carousel-caption glass-object">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/copertina/fmCover.jpg" alt="Alternate Text" />
+
+                <div class="container">
+                    <div class="carousel-caption glass-object">
+                        <h1>Another example headline.</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/copertina/mhCover.jpg" alt="Alternate Text" />
+
+                <div class="container">
+                    <div class="carousel-caption glass-object ">
+                        <h1>One more for good measure.</h1>
+                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="d-flex container-fluid justify-content-around promo py-5">
+        <div class="productCard glass-object">
+            <div class="productImg1 rounded-2">
+                <div class="glass-object productDesc p-2">
+                    <div>
+                        <p class="mb-1">Horizon Zero Dawn Complete Edition</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productCard glass-object">
+            <div class="productImg2 rounded-2">
+                <div class="glass-object productDesc p-2">
+                    <div>
+                        <p class="mb-1">Crisis Core – Final Fantasy VII</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="productCard glass-object">
+            <div class="productImg3 rounded-2">
+                <div class="glass-object productDesc p-2">
+                    <div>
+                        <p class="mb-1">Call of Duty: Modern Warfare II</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productCard glass-object">
+            <div class="productImg4 rounded-2">
+                <div class="glass-object productDesc p-2">
+                    <div>
+                        <p class="mb-1">Xbox Game Pass Ultimate 12 Months</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="px-4 py-5 text-center" id="sort">
+        
+        <h1 class="display-5 fw-bold mb-5 headings">Filtra per categoria</h1>
+        <div class="col-lg-6 mx-auto">
             
-        </ItemTemplate>
-    </asp:Repeater>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex container-fluid justify-content-star promo py-5 flex-wrap">
+        <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
+            <ItemTemplate>
+                <div class="productCard glass-object m-3">
+                    <div class="productImg rounded-2">
+                        <div class="glass-object productDesc p-2">
+                            <div>
+                                <asp:Label ID="Label1" CssClass="mb-1" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <asp:Label ID="Label3" CssClass="PezzoInt" runat="server" Text="<%# Item.PrezzoIntero %>"></asp:Label>
 
-    <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
-        <ItemTemplate>
+                                <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm ms-3" role="button">scopri</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <asp:Label ID="NomeProdotto" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label>
-            <br />
-            <asp:Label ID="CategoriaProdotto" runat="server" Text="<%# Item.NomeCategoria %>"></asp:Label>
-            <br />
-            <asp:Label ID="Data" runat="server" Text="<%# Item.DataRilascio %>"></asp:Label>
-            <br />
-            <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary" role="button">Dettagli</a>
-            <br />
 
-        </ItemTemplate>
-    </asp:Repeater>
+
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 </asp:Content>
