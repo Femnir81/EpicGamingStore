@@ -1,2 +1,106 @@
 ﻿body {
 }
+.logo {
+    width: 55px;
+}
+.logoLabel {
+    font-family: 'Stalinist One', cursive;
+    font-style: italic;
+    margin-left: 15px;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#ddbdfc, #8187DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header {
+    padding-inline: 35px;
+    background-color: #222222;
+    border-bottom: 7px solid #ddbdfc
+}
+.nav-link {
+    color: #ddbdfc
+}
+.glass-object {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.btn-primary {
+    background-color: #8187DC;
+    border: 0
+}
+#sort {
+    background-color: #222222;
+    color:
+
+}
+#myCarousel {
+    border-bottom: 50px solid #222222
+}
+.productImg1 {
+    width: 90%;
+    background-image: url(./assets/img/front/hzFront.jpg);
+    height: 90%;
+    background-size: cover;
+    position: relative
+}
+.productImg2 {
+    width: 90%;
+    background-image: url(./assets/img/front/ffFront.jpg);
+    height: 90%;
+    background-size: cover;
+    position: relative
+}
+.productImg3 {
+        width: 90%;
+        background-image: url(./assets/img/front/mwFront.jpg);
+        height: 90%;
+        background-size: cover;
+        position: relative
+}
+.productImg4 {
+        width: 90%;
+        background-image: url(./assets/img/front/abbonamentoXboxFront.jpg);
+        height: 90%;
+        background-size: cover;
+        position: relative
+}
+.productImg {
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    position: relative
+}
+.productCard {
+    width: 23%;
+    height: 25vh; 
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.promo {
+    background-image:url(./Assets/img/back/patternpad.png)
+}
+.productDesc {
+    width: 87%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: end;
+    color: black;
+    font-size:1.2rem;
+    text-overflow:ellipsis
+
+}
+.headings {
+    color: #8187DC
+}
+.PrezzoInt{
+    text-decoration: line-through;
+    color:red;
+  
+}
+
