@@ -103,7 +103,7 @@
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>--%>
                 <asp:Repeater ID="RepeaterCat" runat="server" ItemType="EpicGamingStore.Categoria">
                     <ItemTemplate>
-                        <a href="ProductByCategory?idcat=<%# Item.IDCategoria %>" class="btn btn-primary btn-sm px-4 gap-3" role="button">
+                        <a href="ProductByCategory.aspx?idcat=<%# Item.IDCategoria %>" class="btn btn-primary btn-sm px-4 gap-3" role="button">
 
                             <%# Item.NomeCategoria  %>
                         </a>
