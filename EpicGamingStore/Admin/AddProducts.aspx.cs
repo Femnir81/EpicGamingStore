@@ -65,10 +65,8 @@ namespace EpicGamingStore.Admin
                 }
             }
 
-            if (PiattaformaSelezionata[PiattaformaSelezionata.Length - 2] == '-') 
-            {
-                PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 2, 1);
-            }
+            PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
+            
             p.Piattaforma = PiattaformaSelezionata;
 
             p.InSaldo = InPromo.Checked;
@@ -99,14 +97,14 @@ namespace EpicGamingStore.Admin
             p.URLGallery4 = Gallery4Name;
 
             p.IDCategoria = Convert.ToInt32(DDLCategory.SelectedValue);
-            foreach(Categoria c in CatList) 
-            { 
-                if(c.IDCategoria == Convert.ToInt32(DDLCategory.SelectedValue)) 
-                {
-                    p.NomeCategoria = c.NomeCategoria;
-                    break;
-                }
-            }
+            //foreach(Categoria c in CatList) 
+            //{ 
+            //    if(c.IDCategoria == Convert.ToInt32(DDLCategory.SelectedValue)) 
+            //    {
+            //        p.NomeCategoria = c.NomeCategoria;
+            //        break;
+            //    }
+            //}
             AddProduct(p);
         }
         public void AddProduct(Prodotto p)
