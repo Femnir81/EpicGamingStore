@@ -1,4 +1,5 @@
 ﻿body {
+    font-family: 'Poppins', sans-serif;
 }
 .logo {
     width: 55px;
@@ -30,77 +31,107 @@
 }
 .btn-primary {
     background-color: #8187DC;
-    border: 0
+    border: 0;
+    
 }
 #sort {
     background-color: #222222;
-    color:
+    color: whitesmoke
 
 }
 #myCarousel {
     border-bottom: 50px solid #222222
 }
 .productImg1 {
-    width: 90%;
+    width: 100%;
     background-image: url(./assets/img/front/hzFront.jpg);
-    height: 90%;
+    height: 70%;
     background-size: cover;
-    position: relative
+    
 }
 .productImg2 {
-    width: 90%;
+    width: 100%;
     background-image: url(./assets/img/front/ffFront.jpg);
-    height: 90%;
+    height: 70%;
     background-size: cover;
-    position: relative
+    
 }
 .productImg3 {
-        width: 90%;
+        width: 100%;
         background-image: url(./assets/img/front/mwFront.jpg);
-        height: 90%;
+        height: 70%;
         background-size: cover;
-        position: relative
+        
 }
 .productImg4 {
-        width: 90%;
+        width: 100%;
         background-image: url(./assets/img/front/abbonamentoXboxFront.jpg);
-        height: 90%;
+        height: 70%;
         background-size: cover;
-        position: relative
+        
 }
 .productImg {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 70%;
     background-size: cover;
-    position: relative
+    
 }
 .productCard {
-    width: 23%;
-    height: 25vh; 
-    display:flex;
-    justify-content:center;
-    align-items:center
+   display:flex;
+   flex-direction:column;
+   width:23%;
+   height:300px;
+   overflow:hidden
+
+
 }
 .promo {
     background-image:url(./Assets/img/back/patternpad.png)
 }
 .productDesc {
-    width: 87%;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     text-align: end;
     color: black;
     font-size:1.2rem;
-    text-overflow:ellipsis
+    width:100%;
+    position:relative;
 
+
+}
+.repCard{
+    margin:1%
 }
 .headings {
     color: #8187DC
 }
-.PrezzoInt{
-    text-decoration: line-through;
-    color:red;
-  
+.PrezzoInt {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    top: -55px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-style:oblique
+    
+}
+.footer {
+    padding-inline: 35px;
+    background-color: #222222;
+    margin: 0;
+    border-top: 7px solid #ddbdfc;
+}
+.footer-link{
+    color: #ddbdfc
+
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddbdfc;
 }
 
