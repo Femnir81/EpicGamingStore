@@ -23,9 +23,9 @@
                     </a>
 
                     <ul class="nav nav-pills align-content-center">
-                        <li class="nav-item"><a href="Default.aspx" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i></a></li>
-                        <li class="nav-item"><a href="Cart.aspx" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li class="nav-item"><a href="Login.aspx" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                        <li class="nav-item"><a href="/Default.aspx" class="nav-link" aria-current="page"><i class="fa-solid fa-house"></i></a></li>
+                        <li class="nav-item"><a href="/Cart.aspx" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li class="nav-item"><a href="/Login.aspx" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i></a></li>
 
                     </ul>
                 </header>

@@ -4,12 +4,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <asp:Label ID="Username" runat="server">Username:</asp:Label> 
-        <input id="Username1" type="text" /> <br />
+        <input id="Username1" type="text" runat="server"  /> <br />
         <asp:Label ID="Password" runat="server">Password:</asp:Label> 
-        <input id="Password1"  type="password"/>
+        <input id="Password1"  type="password" runat="server"/><br />
+        <asp:Label ID="Error" runat="server" Visible="false" Text=""></asp:Label>
     </div>
     <div class="">
-        <asp:Button ID="Invio" runat="server" Text="Login" OnClick="Invio_Click" />
+        <asp:Button ID="Invio" runat="server" Text="Login" OnClick="Logins" />
     </div>
 </asp:Content>
 

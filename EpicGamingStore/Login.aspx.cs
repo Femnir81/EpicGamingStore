@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,36 +14,54 @@ namespace EpicGamingStore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        protected void Invio_Click(object sender, EventArgs e)
-        {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
             con.Open();
 
             SqlCommand command = new SqlCommand();
 
-            command.CommandText = "Select * from AdminTab" ;
+            command.CommandText = "Select * from AdminTab";
             command.Connection = con;
             SqlDataReader reader = command.ExecuteReader();
-           
-            List<AdminClass> ListAdmin = new List<AdminClass>(); 
 
-            if (reader.HasRows) 
+            
+
+            if (reader.HasRows)
             {
-                while (reader.Read()) 
+                while (reader.Read())
                 {
-                    AdminClass admin = new AdminClass(); 
+                    AdminClass admin = new AdminClass();
                     admin.IDAmministratore = Convert.ToInt32(reader["IDAmministratore"]);
                     admin.Username = Convert.ToString(reader["username"]);
                     admin.Password = Convert.ToString(reader["password"]);
 
                     ListAdmin.Add(admin);
-                    
+
                 }
             }
+            con.Close();
+        }
+
+        List<AdminClass> ListAdmin = new List<AdminClass>();
+        protected void Logins(object sender, EventArgs e)
+        {
+            string username = Username1.Value;
+            string password = Password1.Value;
+            foreach(AdminClass item in ListAdmin)
+            {
+                if(username == item.Username && password == item.Password)
+                {
+                    FormsAuthentication.SetAuthCookie(username, true);
+                    Response.Redirect(FormsAuthentication.DefaultUrl);
+
+                }
+                else
+                {
+                    Error.Visible = true;
+                    Error.Text = "Le credenziali di accesso sono errate, riprova.";
+                }
+            }
+
         }
 
         
