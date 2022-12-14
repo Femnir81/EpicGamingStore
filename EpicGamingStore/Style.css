@@ -1,4 +1,5 @@
 ﻿body {
+    font-family: 'Poppins', sans-serif;
 }
 .logo {
     width: 55px;
@@ -30,11 +31,12 @@
 }
 .btn-primary {
     background-color: #8187DC;
-    border: 0
+    border: 0;
+    
 }
 #sort {
     background-color: #222222;
-    color:
+    color: whitesmoke
 
 }
 #myCarousel {
@@ -91,6 +93,7 @@
     color: black;
     font-size:1.2rem;
     width:100%;
+    position:relative;
 
 
 }
@@ -100,9 +103,35 @@
 .headings {
     color: #8187DC
 }
-.PrezzoInt{
-    text-decoration: line-through;
-    color:red;
-  
+.PrezzoInt {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    top: -55px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-style:oblique
+    
+}
+.footer {
+    padding-inline: 35px;
+    background-color: #222222;
+    margin: 0;
+    border-top: 7px solid #ddbdfc;
+}
+.footer-link{
+    color: #ddbdfc
+
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddbdfc;
 }
 

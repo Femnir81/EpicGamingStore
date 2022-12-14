@@ -57,29 +57,33 @@
         <div class="productCard glass-object">
             <div class="productImg1"></div>
             <div class="productDesc p-2">
-                <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                <p class="mb-1">Horizon Zero Dawn Complete Edition</p>
+                <p class="PrezzoInt glass-object p-2">50,00 €</p>
+                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
             <div class="productImg2"></div>
             <div class="productDesc p-2">
-                <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                <p class="mb-1">Crisis Core – Final Fantasy VII - Reunion</p>
+                <p class="PrezzoInt glass-object p-2">50,00 €</p>
+                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
             <div class="productImg3"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                <p class="PrezzoInt glass-object p-2">80,00 €</p>
+                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
             <div class="productImg4"></div>
             <div class="productDesc p-2">
-                <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
+                <p class="mb-1">Xbox Game Pass Ultimate 12 Months</p>
+                <p class="PrezzoInt glass-object p-2">130,00 €</p>
+                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
         
@@ -116,9 +120,10 @@
                     <div class="productImg" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')"></div>
                     <div class="productDesc p-2">
 
-                        <asp:Label ID="Label2" CssClass="mb-1" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
-                        <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px2" role="button">scopri</a>
-
+                        <asp:Label ID="Label2" CssClass="mb-2" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
+                        
+                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.PrezzoIntero.ToString("c2") %></p>
+                        <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px-3 py-2 mt-2 ms-3" role="button">scopri</a>
                     </div>
                 </div>
                 <%--<div class="productCard glass-object m-2 ">
