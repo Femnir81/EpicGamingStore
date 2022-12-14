@@ -107,18 +107,20 @@ namespace EpicGamingStore.Admin
                     break;
                 }
             }
-            //AddProduct(p);
+            AddProduct(p);
         }
-        //public Prodotto AddProduct(Prodotto p) 
-        //{
-        //    SqlConnection con = new SqlConnection();
-        //    con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
-        //    con.Open();
-        //    SqlCommand command = new SqlCommand();
+        public void AddProduct(Prodotto p)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
+            con.Open();
 
-        //    command.CommandText = $"Insert into ProdottiTab values ({p.NomeProdotto},{p.DescrizioneProdotto},{p.Piattaforma},{p.Piattaforma},{p.PrezzoIntero},{p.PrezzoSaldo},{p.InSaldo},{p.Sviluppatore},{p.Publisher},{p.DataRilascio},{p.}) ";
-        //    con.Close();
-        //    return new Prodotto(); 
-        //}
+            SqlCommand command = new SqlCommand();
+            command.CommandText = $"Insert into ProdottiTab values ({p.NomeProdotto},{p.DescrizioneProdotto},{p.Piattaforma},{p.Piattaforma},{p.PrezzoIntero},{p.PrezzoSaldo},{p.InSaldo},{p.Sviluppatore},{p.Publisher},{p.DataRilascio},{p.URLImg},{p.URLImgCopertina},{p.URLGallery1},{p.URLGallery2},{p.URLGallery3},{p.URLGallery4},{p.URLVideoTrailer},{p.IDCategoria})";
+            command.Connection = con;
+
+            con.Close();
+    
+        }
     }
 }
