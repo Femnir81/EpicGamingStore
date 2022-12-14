@@ -11,19 +11,60 @@ namespace EpicGamingStore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            foreach(Prodotto gameCart in Cart.UserCart)
+            if (!IsPostBack)
             {
-                itemCarrello.Text += $"<li>{gameCart.NomeProdotto.ToString()}";
-            }
+                if (Cart.UserCart.Count != 0)
+                {
+                    ContenitoreGriglia.Visible = true;
+                    MessaggioCarrelloVuoto.Visible = false;
+                    double totale = 0;
+                    foreach (Prodotto item in Cart.UserCart)
+                    {
+                        if (item.InSaldo)
+                        {
+                            item.PrezzoIntero = item.PrezzoSaldo;
+                        }
+                        totale += item.PrezzoIntero;
+                    }
+                    SommaArticoli.Text = $"Totale acquisti: {totale.ToString("c2")}";
+                }
+                else
+                {
+                    ContenitoreGriglia.Visible = false;
+                    MessaggioCarrelloVuoto.Visible = true;
+                    MessaggioCarrelloVuoto.Text = "Il carrello è vuoto, riempilo con qualche acquisto!";
+                }
+                GrigliaCarrello.DataSource = Cart.UserCart;
+                GrigliaCarrello.DataBind();
+            }                
         }
 
 
         public static List<Prodotto> UserCart = new List<Prodotto>();
+        public static List<Prodotto> CurrentUserCart = new List<Prodotto>();
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SvuotaCarrello(object sender, EventArgs e)
         {
             Cart.UserCart.Clear();
-            itemCarrello.Text = "Carrello svuotato!";
+            ContenitoreGriglia.Visible = false;
+            MessaggioCarrelloVuoto.Visible = true;
+            MessaggioCarrelloVuoto.Text = "Il carrello è vuoto, riempilo con qualche acquisto!";
+        }
+
+        protected void EliminaArticolo(object sender, EventArgs e)
+        {
+            Button btn = (Button) sender;
+            string id = btn.CommandArgument;
+            Prodotto p = new Prodotto();
+            foreach (Prodotto item in UserCart)
+            {
+                if (item.IDProdotto == Convert.ToInt32(id))
+                {
+                    p = item;
+                }
+            }
+            UserCart.Remove(p);
+            Response.Redirect("Cart.aspx");
         }
     }
 }

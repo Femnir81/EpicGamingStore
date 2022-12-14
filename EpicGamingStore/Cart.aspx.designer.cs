@@ -15,21 +15,48 @@ namespace EpicGamingStore
     {
 
         /// <summary>
-        /// Controllo itemCarrello.
+        /// Controllo ContenitoreGriglia.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label itemCarrello;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ContenitoreGriglia;
 
         /// <summary>
-        /// Controllo Button1.
+        /// Controllo GrigliaCarrello.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.GridView GrigliaCarrello;
+
+        /// <summary>
+        /// Controllo SommaArticoli.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SommaArticoli;
+
+        /// <summary>
+        /// Controllo BottoneCancella.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BottoneCancella;
+
+        /// <summary>
+        /// Controllo MessaggioCarrelloVuoto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MessaggioCarrelloVuoto;
     }
 }
