@@ -100,6 +100,21 @@ namespace EpicGamingStore
             con.Close();
 
             return Inventory;
+
+        }
+
+        public static void DeleteProdotto(int id)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
+            con.Open();
+
+            SqlCommand command = new SqlCommand();
+
+            command.CommandText = $"delete from ProdottiTab where IDProdotto = {id}";
+            command.Connection= con;
+            int row = command.ExecuteNonQuery();
+            con.Close();
         }
 
       

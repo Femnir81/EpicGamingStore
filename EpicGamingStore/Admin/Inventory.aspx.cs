@@ -15,6 +15,14 @@ namespace EpicGamingStore.Admin
         {
 
             Label1.Text = $"Utente Loggato: ({User.Identity.Name})";
+
+            if (!IsPostBack)
+            {
+                Prodotto.getInventory(0).Clear();
+                Prodotto.getInventory(0);
+            }
+            GrigliaInventario.DataSource = Prodotto.getInventory(0);
+            GrigliaInventario.DataBind();
             
         }
 
@@ -23,6 +31,32 @@ namespace EpicGamingStore.Admin
         {
             FormsAuthentication.SignOut();
             Response.Redirect(FormsAuthentication.LoginUrl);
+        }
+
+        protected void Elimina_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button btn = (Button)sender;
+                string id = btn.CommandArgument;
+                Prodotto.DeleteProdotto(Convert.ToInt32(id));
+
+                DeleteMessage.Visible = true;
+                DeleteMessage.Text = "Il prodotto è stato eliminato correttamente";
+                Response.Redirect("Inventory.aspx");
+
+
+            }catch(Exception ex)
+            {
+                DeleteMessage.Visible = true;
+                DeleteMessage.Text = ex.Message; 
+            }
+        }
+
+
+        protected void Modifica_Click1(object sender, EventArgs e)
+        {
+
         }
     }
 }
