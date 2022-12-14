@@ -55,54 +55,34 @@
     </div>
     <div class="d-flex container-fluid justify-content-around promo py-5">
         <div class="productCard glass-object">
-            <div class="productImg1 rounded-2">
-                <div class="glass-object productDesc p-2">
-                    <div>
-                        <p class="mb-1">Horizon Zero Dawn Complete Edition</p>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
-                    </div>
-                </div>
+            <div class="productImg1"></div>
+            <div class="productDesc p-2">
+                <p class="mb-1">Call of Duty: Modern Warfare II</p>
+                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
-            <div class="productImg2 rounded-2">
-                <div class="glass-object productDesc p-2">
-                    <div>
-                        <p class="mb-1">Crisis Core – Final Fantasy VII</p>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
-                    </div>
-                </div>
-
+            <div class="productImg2"></div>
+            <div class="productDesc p-2">
+                <p class="mb-1">Call of Duty: Modern Warfare II</p>
+                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
-            <div class="productImg3 rounded-2">
-                <div class="glass-object productDesc p-2">
-                    <div>
-                        <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
-                    </div>
-                </div>
+            <div class="productImg3"></div>
+            <div class="productDesc p-2">
+                <p class="mb-1">Call of Duty: Modern Warfare II</p>
+                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
             </div>
         </div>
         <div class="productCard glass-object">
-            <div class="productImg4 rounded-2">
-                <div class="glass-object productDesc p-2">
-                    <div>
-                        <p class="mb-1">Xbox Game Pass Ultimate 12 Months</p>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
-                    </div>
-                </div>
+            <div class="productImg4"></div>
+            <div class="productDesc p-2">
+                <p class="mb-1">Call of Duty: Modern Warfare II</p>
+                <button type="button" class="btn btn-primary btn-sm px-2">Scopri</button>
             </div>
         </div>
+        
     </div>
     <div class="px-4 py-5 text-center" id="sort">
         
@@ -129,10 +109,19 @@
             </div>
         </div>
     </div>
-    <div class="d-flex container-fluid promo py-5 flex-wrap">
+    <div class="d-flex promo justify-content-start py-5 flex-wrap catalog">
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
-                <div class="productCard glass-object m-2 ">
+                <div class="productCard glass-object repCard">
+                    <div class="productImg" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')"></div>
+                    <div class="productDesc p-2">
+
+                        <asp:Label ID="Label2" CssClass="mb-1" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
+                        <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px2" role="button">scopri</a>
+
+                    </div>
+                </div>
+                <%--<div class="productCard glass-object m-2 ">
                     <div class="productImg rounded-2" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')">
                         <div class="glass-object productDesc p-2">
                             <div>
@@ -145,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
 
 
