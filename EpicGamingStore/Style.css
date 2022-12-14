@@ -1,5 +1,6 @@
 ﻿body {
     font-family: 'Poppins', sans-serif;
+    overflow-x:hidden
 }
 .logo {
     width: 55px;
@@ -86,7 +87,8 @@
 
 }
 .promo {
-    background-image:url(./Assets/img/back/patternpad.png)
+    background-image:url(./Assets/img/back/patternpad.png);
+    
 }
 .productDesc {
     text-align: end;
@@ -133,5 +135,26 @@
 
 ::-webkit-scrollbar-thumb {
     background: #ddbdfc;
+}
+.detailMain{
+    position:relative;
+}
+.detailCard {
+    position: absolute;
+    padding: 20px;
+    top: -215px;
+    left: 155px;
+    max-width: 1020px;
+    color: black
+}
+.detailDesc {
+    margin-top: 250px;
+    background-color: #222222;
+    color:whitesmoke;
+    padding-inline:45px
+}
+.gallery {
+    background-color: #222222;
+    padding-inline:45px
 }
 

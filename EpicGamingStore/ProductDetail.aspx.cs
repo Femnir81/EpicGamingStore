@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -23,8 +24,9 @@ namespace EpicGamingStore
                     titolo.Text = p.NomeProdotto.ToString();
                     sviluppatore.Text = $"Sviluppatore: {p.Sviluppatore.ToString()}";
                     publisher.Text = $"Publisher: {p.Publisher.ToString()}";
+                    piattaforme.Text = $"Disponibile per: {p.Piattaforma}";
                     dataUscita.Text = $"Data Rilascio: {p.DataRilascio.ToString()}";
-                    prezzo.Text = $"Prezzo: {p.PrezzoIntero.ToString("c2")}";
+                    prezzo.Text = p.PrezzoIntero.ToString("c2");
                     descrizione.Text = p.DescrizioneProdotto.ToString();    
                     gallery1.ImageUrl = $"~/assets/img/gallery/{p.URLGallery1.ToString()}";
                     gallery2.ImageUrl = $"~/assets/img/gallery/{p.URLGallery2.ToString()}";

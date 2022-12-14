@@ -1,61 +1,68 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ProductDetail.aspx.cs" Inherits="EpicGamingStore.ProductDetail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="promo">
+        <asp:Image ID="copertina" Style="object-fit: cover" runat="server" />
 
-    <asp:Image ID="copertina" Style="object-fit: cover" runat="server" />
+        <div class="container detailMain">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 form-control">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <asp:Image ID="front" class="img-fluid rounded-start" runat="server" />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body ms-5 d-flex flex-column justify-content-center">
-                            <asp:Label ID="titolo" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Label ID="sviluppatore" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Label ID="publisher" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Label ID="dataUscita" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Label ID="prezzo" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Button ID="ADD" runat="server" Text="Aggiungi al Carello" OnClick="AddCarrello" />
-                        </div>
-                    </div>
+
+            <div class="detailCard glass-object d-flex">
+                <div class="">
+                    <asp:Image ID="front" class="img-fluid rounded-2 h-100" runat="server" />
+                </div>
+
+                <div class="card-body d-flex justify-content-around flex-column  ms-5">
+                    <asp:Label ID="titolo" CssClass="fs-2 fw-bold" runat="server" Text=""></asp:Label>
+                    <br />
+                    <asp:Label ID="dataUscita" CssClass="fs-4" runat="server" Text=""></asp:Label>
+                    <br />
+                    <asp:Label ID="prezzo" CssClass="fs-2 fw-bold fst-italic" runat="server" Text=""></asp:Label>
+                    <br />
+                    <asp:Button ID="ADD" runat="server" CssClass="btn btn-sm btn-primary p-3" Text="Aggiungi al Carello" OnClick="AddCarrello" />
                 </div>
             </div>
-        </div>
-            <div class="col-8">
-                <asp:Label ID="descrizione" runat="server" Text=""></asp:Label>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div>
-                        <asp:Image ID="gallery1" CssClass="d-block w-50" runat="server" />
-                    </div>
-                    <div>
-                        <asp:Image ID="gallery2" CssClass="d-block w-50" runat="server" />
-                    </div>
-                    <div>
-                       <asp:Image ID="gallery3" CssClass="d-block w-50" runat="server" />
-                    </div>
-                    <div>
-                        <asp:Image ID="gallery4" CssClass="d-block w-50" runat="server" />
-                    </div>
-                </div>
-            </div>
-                    <div>
-                        <iframe width="560" height="315" id="iframe" runat="server"  title="YouTube video player" 
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen="true"></iframe>
-                   
-                        </div>
 
         </div>
-    
+
+        <div class="detailDesc">
+            <h1 class=" py-5 fw-bold headings">Scopri di più</h1>
+
+            <asp:Label ID="descrizione" CssClass="" runat="server" Text=""></asp:Label>
+            <h1 class=" py-5 fw-bold headings">Sviluppatore</h1>
+            <asp:Label ID="sviluppatore" runat="server" Text=""></asp:Label>
+            <br />
+            <asp:Label ID="publisher" runat="server" Text=""></asp:Label>
+            <h1 class=" py-5 fw-bold headings">Disponibile su</h1>
+            <asp:Label ID="piattaforme" runat="server" Text=""></asp:Label>
+            <h1 class=" py-5  m-0 fw-bold headings">Gallery</h1>
+        </div>
+        <div class="gallery pb-5">
+            <div class="d-flex flex-wrap">
+
+                <asp:Image ID="gallery1" CssClass="w-25" runat="server" />
+
+                <asp:Image ID="gallery2" CssClass="w-25" runat="server" />
+
+                <asp:Image ID="gallery3" CssClass="w-25" runat="server" />
+
+                <asp:Image ID="gallery4" CssClass="w-25" runat="server" />
+
+
+            </div>
+            <h1 class=" py-5 fw-bold headings">Trailer</h1>
+            <iframe width="853" height="483" id="iframe" runat="server" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="true"></iframe>
+
+
+
+        </div>
+
+    </div>
+
+
+
 </asp:Content>
