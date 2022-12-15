@@ -53,7 +53,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="d-flex container-fluid justify-content-around promo py-5">
+    <div class="promo py-5">
+        <h1 class="ps-5 pb-2 fw-bold">Best Seller</h1>
+    <div class="d-flex container-fluid justify-content-around py-2">
         <div class="productCard glass-object">
             <div class="productImg1"></div>
             <div class="productDesc p-2">
@@ -87,6 +89,7 @@
             </div>
         </div>
         
+    </div>
     </div>
     <div class="px-4 py-5 text-center" id="sort">
         

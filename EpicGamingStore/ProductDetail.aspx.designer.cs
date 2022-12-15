@@ -42,24 +42,6 @@ namespace EpicGamingStore
         protected global::System.Web.UI.WebControls.Label titolo;
 
         /// <summary>
-        /// Controllo sviluppatore.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sviluppatore;
-
-        /// <summary>
-        /// Controllo publisher.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label publisher;
-
-        /// <summary>
         /// Controllo dataUscita.
         /// </summary>
         /// <remarks>
@@ -94,6 +76,33 @@ namespace EpicGamingStore
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label descrizione;
+
+        /// <summary>
+        /// Controllo sviluppatore.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label sviluppatore;
+
+        /// <summary>
+        /// Controllo publisher.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label publisher;
+
+        /// <summary>
+        /// Controllo piattaforme.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label piattaforme;
 
         /// <summary>
         /// Controllo gallery1.
