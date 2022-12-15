@@ -65,9 +65,9 @@ namespace EpicGamingStore.Admin
                 }
             }
 
-            PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
+            p.Piattaforma = PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
             
-            p.Piattaforma = PiattaformaSelezionata;
+            
 
             p.InSaldo = InPromo.Checked;
 
@@ -105,20 +105,34 @@ namespace EpicGamingStore.Admin
             //        break;
             //    }
             //}
-            AddProduct(p);
-        }
-        public void AddProduct(Prodotto p)
-        {
+            //AddProduct(p);
+
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
             con.Open();
 
-            SqlCommand command = new SqlCommand();
-            command.CommandText = $"Insert into ProdottiTab values ({p.NomeProdotto},{p.DescrizioneProdotto},{p.Piattaforma},{p.Piattaforma},{p.PrezzoIntero},{p.PrezzoSaldo},{p.InSaldo},{p.Sviluppatore},{p.Publisher},{p.DataRilascio},{p.URLImg},{p.URLImgCopertina},{p.URLGallery1},{p.URLGallery2},{p.URLGallery3},{p.URLGallery4},{p.URLVideoTrailer},{p.IDCategoria})";
-            command.Connection = con;
 
+            AddProduct(p, con);
             con.Close();
-    
+            
+
+        }
+        public void AddProduct(Prodotto p, SqlConnection con)
+        {
+            SqlCommand command = new SqlCommand();
+                command.CommandText = $"Insert into ProdottiTab values ('{p.NomeProdotto}','{p.DescrizioneProdotto}','{p.Piattaforma}','{p.PrezzoIntero}','{p.PrezzoSaldo}','{p.InSaldo}','{p.Sviluppatore}','{p.Publisher}','{p.DataRilascio}','{p.URLImg}','{p.URLImgCopertina}','{p.URLGallery1}','{p.URLGallery2}','{p.URLGallery3}','{p.URLGallery4}','{p.URLVideoTrailer}','{p.IDCategoria}')";
+                command.Connection = con;
+                int row = command.ExecuteNonQuery();
+                if(row > 0)
+                {
+                    LabelEX.Text = "Ins Effettuato correttamente!";
+                }
+                else
+                {
+                    LabelEX.Text = "Sei uno stronzo";
+                }
+
         }
     }
 }
