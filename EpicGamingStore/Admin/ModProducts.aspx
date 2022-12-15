@@ -22,8 +22,8 @@
         <input id="Sviluppatore" type="text" runat="server" placeholder="Sviluppatore"/>
         <input id="Publisher" type="text" runat="server" placeholder="Publish"/>
         <input id="DataRilascio" type="date" runat="server" />
-        <asp:FileUpload ID="FrontUpload" runat="server"  placeholder="Front" />
-        <asp:Label ID="front" runat="server" Text=""></asp:Label>
+        <asp:FileUpload ID="FrontUpload" runat="server"  placeholder="Front"  />
+        
         <asp:FileUpload ID="CoverUpload" runat="server"  placeholder="Cover"/>
         <asp:FileUpload ID="Gallery1" runat="server"  placeholder="G1"/>
         <asp:FileUpload ID="Gallery2" runat="server"  placeholder="G2"/>
@@ -31,7 +31,7 @@
         <asp:FileUpload ID="Gallery4" runat="server"  placeholder="G4"/>
         <input id="VideoUrl" type="text" runat="server" placeholder="VideoURL"/>
         <asp:DropDownList ID="DDLCategory" runat="server"></asp:DropDownList>
-        <asp:Button ID="Add" runat="server" Text="Modifica" />
+        
     </div>
 
     <hr />

@@ -105,15 +105,6 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.WebControls.FileUpload FrontUpload;
 
         /// <summary>
-        /// Controllo front.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label front;
-
-        /// <summary>
         /// Controllo CoverUpload.
         /// </summary>
         /// <remarks>
@@ -177,13 +168,13 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.WebControls.DropDownList DDLCategory;
 
         /// <summary>
-        /// Controllo Add.
+        /// Controllo Button1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Add;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// Controllo LabelEX.
