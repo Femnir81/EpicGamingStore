@@ -11,8 +11,11 @@ namespace EpicGamingStore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            string id = Request.QueryString["idcat"];
             if (!IsPostBack)
             {
+                
                 Prodotto.getInventory(0).Clear();
                 Prodotto.getInventory(0);
 
@@ -20,7 +23,13 @@ namespace EpicGamingStore
                 Categoria.getCategories();
                 
             }
+            if (id == null)
+            {
             Repeater1.DataSource = Prodotto.getInventory(0);
+            } else
+            {
+                Repeater1.DataSource = Prodotto.getInventory(Convert.ToInt32(id));
+            }
             Repeater1.DataBind();
 
             RepeaterCat.DataSource = Categoria.getCategories();

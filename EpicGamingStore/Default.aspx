@@ -97,16 +97,9 @@
         <div class="col-lg-6 mx-auto">
             
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-               <%-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>--%>
                 <asp:Repeater ID="RepeaterCat" runat="server" ItemType="EpicGamingStore.Categoria">
                     <ItemTemplate>
-                        <a href="ProductByCategory.aspx?idcat=<%# Item.IDCategoria %>" class="btn btn-primary btn-sm px-4 gap-3" role="button">
+                        <a href="ProductByCategory.aspx?idcat=<%# Item.IDCategoria %>" class="btn btn-primary btn-sm px-4 gap-3 mx-2 fs-4" role="button">
 
                             <%# Item.NomeCategoria  %>
                         </a>
@@ -129,20 +122,7 @@
                         <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px-3 py-2 mt-2 ms-3" role="button">scopri</a>
                     </div>
                 </div>
-                <%--<div class="productCard glass-object m-2 ">
-                    <div class="productImg rounded-2" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')">
-                        <div class="glass-object productDesc p-2">
-                            <div>
-                                <asp:Label ID="Label1" CssClass="mb-1" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <asp:Label ID="Label3" CssClass="PezzoInt" runat="server" Text="<%# Item.PrezzoIntero %>"></asp:Label>
-
-                                <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm ms-3" role="button">scopri</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>--%>
+              
 
 
 

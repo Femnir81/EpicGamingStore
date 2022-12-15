@@ -14,7 +14,8 @@ namespace EpicGamingStore.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Label1.Text = $"Utente Loggato: ({User.Identity.Name})";
+            
+            Label1.Text = $"Utente Loggato: {User.Identity.Name}";
 
             if (!IsPostBack)
             {
