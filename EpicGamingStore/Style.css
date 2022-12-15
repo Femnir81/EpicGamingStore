@@ -1,6 +1,17 @@
-﻿body {
+﻿html{
+    height:100%
+}
+body {
     font-family: 'Poppins', sans-serif;
-    overflow-x:hidden
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+    position:relative
+    
+
+       
 }
 .logo {
     width: 55px;
@@ -17,7 +28,7 @@
 .header {
     padding-inline: 35px;
     background-color: #222222;
-    border-bottom: 7px solid #ddbdfc
+    border-bottom: 7px solid #ddbdfc;
 }
 .nav-link {
     color: #ddbdfc
@@ -30,6 +41,16 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+.glass-object-danger {
+    background: rgba( 255, 0, 0, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color:whitesmoke
+}
+
 .btn-primary {
     background-color: #8187DC;
     border: 0;
@@ -121,6 +142,7 @@
     margin: 0;
     border-top: 7px solid #ddbdfc;
 }
+
 .footer-link{
     color: #ddbdfc
 
@@ -160,4 +182,25 @@
     background-color: #222222;
     padding-inline:45px
 }
+.CartDetail{
+    height:150px;
+    
+}
+.EmptyCard {
+    height: 150px;
+    margin-top: 180px
+}
+.CartContainer{
+    height:85vh
+}
+.table {
+    border:0
+}
+.accessMain {
+    height:85vh;
+}
+.icon {
+    font-size:5.5rem
+}
+
 

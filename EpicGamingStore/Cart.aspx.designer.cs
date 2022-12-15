@@ -42,6 +42,15 @@ namespace EpicGamingStore
         protected global::System.Web.UI.WebControls.Label SommaArticoli;
 
         /// <summary>
+        /// Controllo Button2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
         /// Controllo BottoneCancella.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace EpicGamingStore
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BottoneCancella;
+
+        /// <summary>
+        /// Controllo ExMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ExMessage;
 
         /// <summary>
         /// Controllo MessaggioCarrelloVuoto.

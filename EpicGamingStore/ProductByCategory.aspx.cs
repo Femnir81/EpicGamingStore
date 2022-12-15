@@ -13,9 +13,21 @@ namespace EpicGamingStore
         {
             
             int category = Convert.ToInt32(Request.QueryString["idcat"]);
+            if (!IsPostBack)
+            {
+                Prodotto.getInventory(category).Clear();
+                Prodotto.getInventory(category);
 
+                Categoria.getCategories().Clear();
+                Categoria.getCategories();
+
+            }
             Repeater1.DataSource = Prodotto.getInventory(category);
             Repeater1.DataBind();
+
+            RepeaterCat.DataSource = Categoria.getCategories();
+            RepeaterCat.DataBind();
+            
 
             
             

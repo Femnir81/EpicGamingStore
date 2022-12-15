@@ -16,7 +16,7 @@ namespace EpicGamingStore
                 if (Cart.UserCart.Count != 0)
                 {
                     ContenitoreGriglia.Visible = true;
-                    MessaggioCarrelloVuoto.Visible = false;
+                    ExMessage.Visible = false;
                     double totale = 0;
                     foreach (Prodotto item in Cart.UserCart)
                     {
@@ -31,7 +31,7 @@ namespace EpicGamingStore
                 else
                 {
                     ContenitoreGriglia.Visible = false;
-                    MessaggioCarrelloVuoto.Visible = true;
+                    ExMessage.Visible = true;
                     MessaggioCarrelloVuoto.Text = "Il carrello è vuoto, riempilo con qualche acquisto!";
                 }
                 GrigliaCarrello.DataSource = Cart.UserCart;
