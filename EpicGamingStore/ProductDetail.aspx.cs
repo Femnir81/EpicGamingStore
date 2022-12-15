@@ -25,7 +25,14 @@ namespace EpicGamingStore
                     sviluppatore.Text = $"Sviluppatore: {p.Sviluppatore.ToString()}";
                     publisher.Text = $"Publisher: {p.Publisher.ToString()}";
                     piattaforme.Text = $"Disponibile per: {p.Piattaforma}";
+                    if (p.DataRilascio == null)
+                    {
+                        dataUscita.Text = "Data Rilascio:";
+                    }
+                    else
+                    {
                     dataUscita.Text = $"Data Rilascio: {p.DataRilascio.ToString()}";
+                    }
                     prezzo.Text = p.PrezzoIntero.ToString("c2");
                     descrizione.Text = p.DescrizioneProdotto.ToString();    
                     gallery1.ImageUrl = $"~/assets/img/gallery/{p.URLGallery1.ToString()}";
