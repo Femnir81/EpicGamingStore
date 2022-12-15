@@ -14,6 +14,10 @@ namespace EpicGamingStore.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            foreach (ListItem item in CheckBoxPiattaforma.Items)
+            {
+                item.Attributes.Add("style", "margin-bottom:25px, margin-left:10px"); 
+            }
             if (!IsPostBack) 
             {
                 SqlConnection con = new SqlConnection();
