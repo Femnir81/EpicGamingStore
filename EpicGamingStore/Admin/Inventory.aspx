@@ -33,7 +33,7 @@
                 </asp:TemplateField>
                  <asp:TemplateField>
                     <ItemTemplate>
-                        <a href="ModProducts.aspx?idprod=<%# Item.IDProdotto %>" class="btn btn-caution" role="button">Modifica</a>
+                        <a href="ModProducts.aspx?idprod=<%# Item.IDProdotto %>" class="btn btn-warning" role="button">Modifica</a>
                         <asp:Button ID="Elimina" runat="server" Text="Elimina" OnClick="Elimina_Click" CommandArgument="<%# Item.IDProdotto %>"  />
                     </ItemTemplate>
                 </asp:TemplateField>
