@@ -31,7 +31,7 @@
         <asp:FileUpload ID="Gallery4" runat="server"  placeholder="G4"/>
         <input id="VideoUrl" type="text" runat="server" placeholder="VideoURL"/>
         <asp:DropDownList ID="DDLCategory" runat="server"></asp:DropDownList>
-        
+        <asp:Button ID="Button1" runat="server" Text="Aggiorna" OnClick="UpdateBtn_Click"/>
     </div>
 
     <hr />
