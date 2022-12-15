@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Admin\AddProducts.aspx" />
     <Content Include="Admin\Inventory.aspx" />
+    <Content Include="Admin\ModProducts.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -115,6 +116,13 @@
     </Compile>
     <Compile Include="Admin\Inventory.aspx.designer.cs">
       <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModProducts.aspx.cs">
+      <DependentUpon>ModProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModProducts.aspx.designer.cs">
+      <DependentUpon>ModProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
