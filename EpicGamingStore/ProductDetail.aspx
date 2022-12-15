@@ -21,7 +21,7 @@
                     <br />
                     <asp:Label ID="prezzo" CssClass="fs-2 fw-bold fst-italic" runat="server" Text=""></asp:Label>
                     <br />
-                    <asp:Button ID="ADD" runat="server" CssClass="btn btn-sm btn-primary p-3" Text="Aggiungi al Carello" OnClick="AddCarrello" />
+                    <asp:Button ID="ADD" runat="server" CssClass="btn btn-sm btn-primary p-3" Text="Aggiungi al Carrello" OnClick="AddCarrello" />
                 </div>
             </div>
 
