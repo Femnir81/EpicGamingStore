@@ -52,11 +52,5 @@ namespace EpicGamingStore.Admin
                 DeleteMessage.Text = ex.Message; 
             }
         }
-
-
-        protected void Modifica_Click1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
