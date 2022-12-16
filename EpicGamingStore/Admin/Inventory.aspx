@@ -34,6 +34,11 @@
                             <asp:Label ID="PrezzoArticolo" runat="server" Text=""><%# Item.PrezzoIntero.ToString("c2") %></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Scontato" ControlStyle-CssClass="fs-5 fw-bold">
+                        <ItemTemplate>
+                            <asp:Label ID="PrezzoSaldo" runat="server" Text=""><%# Item.GetPrice().ToString("c2") %></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="In Saldo" ControlStyle-CssClass="fs-5 fw-bold ms-4">
                         <ItemTemplate>
                             <asp:CheckBox ID="InSaldo" runat="server" Checked="<%# Item.InSaldo %>" Enabled="false" />

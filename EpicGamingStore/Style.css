@@ -106,9 +106,19 @@ body {
    width:23%;
    min-width:390px;
    height:300px;
-   overflow:hidden
+   overflow:hidden;
+   position:relative
 
 
+}
+.onSale{
+    position:absolute;
+    width:55px;
+    right:5px;
+    top:10px
+
+
+    
 }
 .promo {
     background-image:url(./Assets/img/back/patternpad.png);

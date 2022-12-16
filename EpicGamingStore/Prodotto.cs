@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Web;
 
@@ -116,6 +117,17 @@ namespace EpicGamingStore
             int row = command.ExecuteNonQuery();
             con.Close();
         }
+        public double GetPrice()
+        {
+            if (InSaldo)
+            {
+                return PrezzoSaldo;
+            }
+            else
+            {
+                return PrezzoIntero;
+            }
+        } 
 
       
     }

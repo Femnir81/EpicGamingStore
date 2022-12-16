@@ -51,6 +51,14 @@ namespace EpicGamingStore
             MessaggioCarrelloVuoto.Visible = true;
             MessaggioCarrelloVuoto.Text = "Il carrello è vuoto, riempilo con qualche acquisto!";
         }
+        protected void CheckOut(object sender, EventArgs e)
+        {
+            Cart.UserCart.Clear();
+            ContenitoreGriglia.Visible = false;
+            ExMessage.Visible = true;
+            MessaggioCarrelloVuoto.Visible = true;
+            MessaggioCarrelloVuoto.Text = "Grazie per l'acquisto! A presto!";
+        }
 
         protected void EliminaArticolo(object sender, EventArgs e)
         {

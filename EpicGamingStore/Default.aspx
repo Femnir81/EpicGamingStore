@@ -113,12 +113,13 @@
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
                 <div class="productCard glass-object m-2">
+                    <img runat="server" visible="<%# Item.InSaldo %>" src="./Assets/Img/Utility/hot-sale.png" class="onSale" alt="Sale" />    
                     <div class="productImg" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')"></div>
                     <div class="productDesc p-2">
 
                         <asp:Label ID="Label2" CssClass="mb-2" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
                         
-                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.PrezzoIntero.ToString("c2") %></p>
+                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.GetPrice().ToString("c2") %></p>
                         <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px-3 py-2 mt-2 ms-3" role="button">scopri</a>
                     </div>
                 </div>
