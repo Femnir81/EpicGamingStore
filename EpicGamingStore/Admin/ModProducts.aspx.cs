@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -101,6 +102,11 @@ namespace EpicGamingStore.Admin
                 }
             }
 
+        }
+        protected void Logout(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Response.Redirect(FormsAuthentication.LoginUrl);
         }
 
         protected void UpdateBtn_Click(object sender, EventArgs e)

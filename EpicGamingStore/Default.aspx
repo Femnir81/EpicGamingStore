@@ -55,8 +55,8 @@
     </div>
     <div class="promo py-5">
         <h1 class="ps-5 pb-2 fw-bold">Best Seller</h1>
-    <div class="d-flex container-fluid justify-content-around py-2">
-        <div class="productCard glass-object">
+    <div class="d-flex flex-wrap container-fluid justify-content-center py-2">
+        <div class="productCard glass-object m-2">
             <div class="productImg1"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Horizon Zero Dawn Complete Edition</p>
@@ -64,7 +64,7 @@
                 <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
-        <div class="productCard glass-object">
+        <div class="productCard glass-object  m-2">
             <div class="productImg2"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Crisis Core – Final Fantasy VII - Reunion</p>
@@ -72,7 +72,7 @@
                 <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
-        <div class="productCard glass-object">
+        <div class="productCard glass-object  m-2">
             <div class="productImg3"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Call of Duty: Modern Warfare II</p>
@@ -80,7 +80,7 @@
                 <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
             </div>
         </div>
-        <div class="productCard glass-object">
+        <div class="productCard glass-object m-2">
             <div class="productImg4"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Xbox Game Pass Ultimate 12 Months</p>
@@ -109,16 +109,17 @@
             </div>
         </div>
     </div>
-    <div class="d-flex promo justify-content-start py-5 flex-wrap catalog">
+    <div class="d-flex promo justify-content-center py-5 flex-wrap catalog">
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
-                <div class="productCard glass-object repCard">
+                <div class="productCard glass-object m-2">
+                    <img runat="server" visible="<%# Item.InSaldo %>" src="./Assets/Img/Utility/hot-sale.png" class="onSale" alt="Sale" />    
                     <div class="productImg" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')"></div>
                     <div class="productDesc p-2">
 
                         <asp:Label ID="Label2" CssClass="mb-2" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
                         
-                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.PrezzoIntero.ToString("c2") %></p>
+                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.GetPrice().ToString("c2") %></p>
                         <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px-3 py-2 mt-2 ms-3" role="button">scopri</a>
                     </div>
                 </div>

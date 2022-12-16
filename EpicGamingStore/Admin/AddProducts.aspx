@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="promo">
-         <div class="d-flex justify-content-between px-5 me-4 my-5 ">
+         <div class="d-flex justify-content-between px-5 me-4 mt-5 mb-2 ">
             <div>
                 <a href="/Admin/AddProducts.aspx" class="btn btn-success btn-sm mx-1 px-3 ms-4 py-2 adminBtn" role="button"><i class="fa-solid fa-plus"></i></a>
                 <a href="/Admin/Register.aspx" class="btn btn-warning btn-sm mx-1 px-3 py-2 adminBtn" role="button"><i class="fa-solid fa-user-plus"></i></a>
@@ -16,6 +16,7 @@
         </div>
     <div class="container p-5 d-flex justify-content-center">
     <div class="d-flex flex-wrap addWindow p-5 glass-object">
+        <h1 class="w-100 mb-4 fw-bold headings">Aggiungi prodotto</h1>
         <div class="addForm">
         <h3 class="fw-bold">Nome prodotto</h3>
         <input id="Nome" class="my-2 rounded-2 input" type="text" runat="server" />
