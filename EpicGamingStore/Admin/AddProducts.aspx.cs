@@ -22,6 +22,7 @@ namespace EpicGamingStore.Admin
             }
             if (!IsPostBack) 
             {
+
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
                 con.Open();
@@ -76,8 +77,8 @@ namespace EpicGamingStore.Admin
                 }
             }
 
-            p.Piattaforma = PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
-            
+            p.Piattaforma = PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3); //Pulisce la stringa di Piattaforma dagli ultimi caratteri
+                                                                                                 // " - "
             
 
             p.InSaldo = InPromo.Checked;
@@ -108,15 +109,7 @@ namespace EpicGamingStore.Admin
             p.URLGallery4 = Gallery4Name;
 
             p.IDCategoria = Convert.ToInt32(DDLCategory.SelectedValue);
-            //foreach(Categoria c in CatList) 
-            //{ 
-            //    if(c.IDCategoria == Convert.ToInt32(DDLCategory.SelectedValue)) 
-            //    {
-            //        p.NomeCategoria = c.NomeCategoria;
-            //        break;
-            //    }
-            //}
-            //AddProduct(p);
+            
 
 
             SqlConnection con = new SqlConnection();
@@ -132,18 +125,94 @@ namespace EpicGamingStore.Admin
         }
         public void AddProduct(Prodotto p, SqlConnection con)
         {
+
+
             SqlCommand command = new SqlCommand();
-                command.CommandText = $"Insert into ProdottiTab values ('{p.NomeProdotto}','{p.DescrizioneProdotto}','{p.Piattaforma}','{p.PrezzoIntero}','{p.PrezzoSaldo}','{p.InSaldo}','{p.Sviluppatore}','{p.Publisher}','{p.DataRilascio}','{p.URLImg}','{p.URLImgCopertina}','{p.URLGallery1}','{p.URLGallery2}','{p.URLGallery3}','{p.URLGallery4}','{p.URLVideoTrailer}','{p.IDCategoria}')";
+
+            // AGGIUNTA DEI PARAMETRI RICHIESTI DA MARCO. NECESSARI? (IL METODO PREVEDE IL PASSAGGIO DI UN OGGETTO. è PIù SICURO?)
+            command.Parameters.AddWithValue("@Nome", p.NomeProdotto);
+            command.Parameters.AddWithValue("@Descrizione", p.DescrizioneProdotto);
+            command.Parameters.AddWithValue("@Piattaforma", p.Piattaforma);
+            command.Parameters.AddWithValue("@PrezzoInt", p.PrezzoIntero);
+            command.Parameters.AddWithValue("@PrezzoSaldo", p.PrezzoSaldo);
+            command.Parameters.AddWithValue("@InSaldo", p.InSaldo);
+            command.Parameters.AddWithValue("@Sviluppatore", p.Sviluppatore);
+            command.Parameters.AddWithValue("@Publisher", p.Publisher);
+            command.Parameters.AddWithValue("@DataRilascio", p.DataRilascio); 
+            command.Parameters.AddWithValue("@URLImg", p.URLImg); 
+            command.Parameters.AddWithValue("@URLImgCopertina", p.URLImgCopertina);
+            command.Parameters.AddWithValue("@Gallery1", p.URLGallery1);
+            command.Parameters.AddWithValue("@Gallery2", p.URLGallery2);
+            command.Parameters.AddWithValue("@Gallery3", p.URLGallery3);
+            command.Parameters.AddWithValue("@Gallery4", p.URLGallery4);
+            command.Parameters.AddWithValue("@VideoTrailer", p.URLVideoTrailer);
+            command.Parameters.AddWithValue("@Category", p.IDCategoria);
+
+
+            command.CommandText = "Insert into ProdottiTab values (@Nome, " +
+                                                                  "@Descrizione, " +
+                                                                  "@Piattaforma, " +
+                                                                  "@PrezzoInt, " +
+                                                                  "@PrezzoSaldo, " +
+                                                                  "@InSaldo, " +
+                                                                  "@Sviluppatore, " +
+                                                                  "@Publisher," +
+                                                                  "@DataRilascio, " +
+                                                                  "@URLImg, " +
+                                                                  "@URLImgCopertina, " +
+                                                                  "@Gallery1," +
+                                                                  "@Gallery2," +
+                                                                  "@Gallery3, " +
+                                                                  "@Gallery4," +
+                                                                  "@VideoTrailer," +
+                                                                  "@Category )";
                 command.Connection = con;
-                int row = command.ExecuteNonQuery();
-                if(row > 0)
+            int row;
+
+            try
+            {
+                row = command.ExecuteNonQuery();
+                if (row > 0)
                 {
-                    LabelEX.Text = "Ins Effettuato correttamente!";
+                    LabelEX.Text = "Inserimento effettuato correttamente!";
                 }
                 else
                 {
-                    LabelEX.Text = "Sei uno stronzo";
+                    LabelEX.Text = "Inserimento non riuscito.";
                 }
+            }
+            catch(Exception ex)
+            {
+                LabelEX.Text = ex.Message;
+            }
+            finally
+            {
+                Nome.Value = "";
+                Descrizione.Value = "";
+                foreach(ListItem cb in CheckBoxPiattaforma.Items)
+                {
+                    cb.Selected = false;
+                }
+                PrezzoIntero.Value = "";
+                PrezzoSaldo.Value = "";
+                InPromo.Checked = false;
+                Sviluppatore.Value = "";
+                Publisher.Value = "";
+                DataRilascio.Value = "";
+                FrontUpload.EnableViewState = false;
+                CoverUpload.EnableViewState = false;
+                Gallery1.EnableViewState = false;
+                Gallery2.EnableViewState = false;
+                Gallery3.EnableViewState = false;
+                Gallery4.EnableViewState = false;
+                VideoUrl.Value = "";
+                DDLCategory.SelectedValue = DDLCategory.Items[0].Value;
+
+
+            }
+                
+               
+               
 
         }
     }

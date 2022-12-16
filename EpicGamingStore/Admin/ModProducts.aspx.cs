@@ -152,31 +152,82 @@ namespace EpicGamingStore.Admin
             }
 
             PiattaformaSelezionata = PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
-            //int inSaldoBit = 0;
-            //if (InSaldo.Checked)
-            //{
-            //    inSaldoBit = 1;
-            //}
+            
+            
+            int id = Convert.ToInt32(Request.QueryString["idprod"]);     //  ---> Riprende l'IDProdotto dalla query-string
 
-            int id = Convert.ToInt32(Request.QueryString["idprod"]);
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStringEpicGaming"].ToString();
             con.Open();
 
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"UPDATE ProdottiTab SET NomeProdotto='{Nome.Value}', DescrizioneProdotto='{Descrizione.Value}', Piattaforma='{PiattaformaSelezionata}', PrezzoIntero={Convert.ToDouble(PrezzoIntero.Value)}, PrezzoSaldo={Convert.ToDouble(PrezzoSaldo.Value)}, InSaldo='{InSaldo.Checked}', Sviluppatore='{Sviluppatore.Value}', Publisher='{Publisher.Value}', DataRilascio='{DataRilascio.Value}', URLImg='{URLImg}', URLImgCopertina='{URLImgCopertina}', URLGallery1='{URLGallery1}', URLGallery2='{URLGallery2}', URLGallery3='{URLGallery3}', URLGallery4='{URLGallery4}', URLVideoTrailer='{VideoUrl.Value}' , IDCategoria={Convert.ToInt32(DDLCategory.SelectedValue)} WHERE IDProdotto={id}";
+
+            //Comm Params
+            command.Parameters.AddWithValue("@Nome", Nome.Value);
+            command.Parameters.AddWithValue("@Descrizione", Descrizione.Value);
+            command.Parameters.AddWithValue("@Piattaforma", PiattaformaSelezionata);
+            command.Parameters.AddWithValue("@PrezzoInt", Convert.ToDouble(PrezzoIntero.Value));
+            command.Parameters.AddWithValue("@PrezzoSaldo", Convert.ToDouble(PrezzoSaldo.Value);
+            command.Parameters.AddWithValue("@InSaldo", InSaldo.Checked);
+            command.Parameters.AddWithValue("@Sviluppatore", Sviluppatore.Value);
+            command.Parameters.AddWithValue("@Publisher", Publisher.Value);
+            command.Parameters.AddWithValue("@DataRilascio", DataRilascio.Value);
+            command.Parameters.AddWithValue("@FrontImg", URLImg);
+            command.Parameters.AddWithValue("@CoverImg",URLImgCopertina);
+            command.Parameters.AddWithValue("@Gallery1", URLGallery1);
+            command.Parameters.AddWithValue("@Gallery2", URLGallery2);
+            command.Parameters.AddWithValue("@Gallery3", URLGallery3);
+            command.Parameters.AddWithValue("@Gallery4", URLGallery4);
+            command.Parameters.AddWithValue("@VideoTrailer", VideoUrl.Value);
+            command.Parameters.AddWithValue("@Category", Convert.ToInt32(DDLCategory.SelectedValue));
+
+
+            command.CommandText = $"UPDATE ProdottiTab SET NomeProdotto= @Nome, " +
+                                                         $"DescrizioneProdotto= @Descrizione, " +
+                                                         $"Piattaforma= @Piattaforma, " +
+                                                         $"PrezzoIntero= @PrezzoInt, " +
+                                                         $"PrezzoSaldo= @PrezzoSalde, " +
+                                                         $"InSaldo= @InSaldo, " +
+                                                         $"Sviluppatore= @Sviluppatore, " +
+                                                         $"Publisher= @Publisher, " +
+                                                         $"DataRilascio= @DataRilascio, " +
+                                                         $"URLImg= @FrontImg, " +
+                                                         $"URLImgCopertina= @CoverImg, " +
+                                                         $"URLGallery1= @Gallery1, " +
+                                                         $"URLGallery2= @Gallery2, " +
+                                                         $"URLGallery3= @Gallery3, " +
+                                                         $"URLGallery4= @Gallery4, " +
+                                                         $"URLVideoTrailer= @VideoTrailer ," +
+                                                         $"IDCategoria= @Category " +
+                                                         $"WHERE IDProdotto={id}";
             command.Connection = con;
-            int row = command.ExecuteNonQuery();
-            if (row > 0)
+            int row;
+            try 
             {
-                LabelEX.Text = "Ins Effettuato correttamente!";
+                row = command.ExecuteNonQuery();
+                if (row > 0)
+                {
+                    LabelEX.Text = "Modifica prodotto eseguita correttamente";
+                }
+                else
+                {
+                    LabelEX.Text = "Modifica prodotto non riuscita";
+                }
             }
-            else
+            catch(Exception ex)
             {
-                LabelEX.Text = "Sei uno stronzo";
+                LabelEX.Text = ex.Message;
             }
+            finally
+            {
+                Response.Redirect("/Admin/Inventory.aspx");
+            }
+            
 
             con.Close();
+
+
         }
     }
 }
