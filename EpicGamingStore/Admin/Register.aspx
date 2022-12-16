@@ -16,7 +16,7 @@
     </div>
 
     <div class="promo accessMain d-flex justify-content-center align-content-center">
-        <div class="container my-5 d-flex justify-content-center align-content-center promo">
+        <div class="container my-5 d-flex justify-content-center align-content-center ">
             <div class="w-50 my-5  d-flex flex-column align-items-center justify-content-center glass-object">
                 <h1 class="icon"><i class="fa-solid fa-user-tie"></i></h1>
                 <asp:Label ID="Username" CssClass="fw-bold fs-4 mb-2 mt-3" runat="server">Username:</asp:Label>

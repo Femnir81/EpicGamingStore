@@ -16,6 +16,7 @@
         </div>
     <div class="container p-5 d-flex justify-content-center">
     <div class="d-flex flex-wrap addWindow p-5 glass-object">
+        <h1 class="w-100 mb-4 fw-bold headings">Aggiungi prodotto</h1>
         <div class="addForm">
         <h3 class="fw-bold">Nome prodotto</h3>
         <input id="Nome" class="my-2 rounded-2 input" type="text" runat="server" />
