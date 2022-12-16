@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="EpicGamingStore.Admin.Register" %>
+﻿<%@ Page Title="" Language="C#"  MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="EpicGamingStore.Admin.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -19,20 +19,26 @@
         <div class="container my-5 d-flex justify-content-center align-content-center promo">
             <div class="w-50 my-5  d-flex flex-column align-items-center justify-content-center glass-object">
                 <h1 class="icon"><i class="fa-solid fa-user-tie"></i></h1>
+
                 <asp:Label ID="Username" CssClass="fw-bold fs-4 mb-2 mt-3" runat="server">Username:</asp:Label>
                 <input id="Username1" class="w-50 rounded-2 input" type="text" runat="server" />
-                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Username1"></asp:RequiredFieldValidator>--%>
+
+                <asp:RequiredFieldValidator ID="UserNameValidator" runat="server" ErrorMessage="Username necessaria" ControlToValidate="Username1"></asp:RequiredFieldValidator>
                 <br />
+
                 <asp:Label ID="Password" CssClass="fw-bold fs-4 mb-2 " runat="server">Password:</asp:Label>
                 <input id="Password1" class="w-50 rounded-2 input" type="password" runat="server" /><br />
-                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="Password1" runat="server"></asp:RequiredFieldValidator>--%>
+
+                <asp:RequiredFieldValidator ID="PasswordValidator" ErrorMessage="Password non valida" ControlToValidate="Password1" runat="server"></asp:RequiredFieldValidator>
+               
                 <asp:Label ID="RipetiPassword" CssClass="fw-bold fs-4 mb-2 " runat="server">Conferma Password:</asp:Label>
                 <input id="Password2" class="w-50 rounded-2 input" type="password" runat="server" /><br />
-                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="Password2" runat="server"></asp:RequiredFieldValidator>--%>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="Password1" ControlToCompare="Password2" Type="String" EnableClientScript="false"></asp:CompareValidator>
+                <asp:CompareValidator ID="ComparePswValidator" runat="server" Display="None" ErrorMessage="Le password devono corrispondere" ControlToValidate="Password1" ControlToCompare="Password2" Type="String" EnableClientScript="false"></asp:CompareValidator>
                 <div class="d-flex flex-column align-content-center ">
                     <asp:Button ID="Invio" runat="server" CssClass="btn btn-primary btn-sm mx-1 fs-5 px-3 py-2" Text="Register" OnClick="RegisterAdmin" />
-                    <asp:Label ID="Error" runat="server" CssClass="my-3" Visible="false" Text=""></asp:Label>
+                    
+                    <asp:Label ID="PswError" runat="server" CssClass="my-3" Visible="false" Text=""></asp:Label>
+
                 </div>
             </div>
         </div>

@@ -16,6 +16,7 @@ namespace EpicGamingStore.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = $"Utente Loggato: {User.Identity.Name}";
+            this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
         protected void Logout(object sender, EventArgs e)
         {
@@ -31,10 +32,27 @@ namespace EpicGamingStore.Admin
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
-            command.Parameters.AddWithValue("@Username", Username1.Value);
-            command.Parameters.AddWithValue("@Password", Password1.Value);
-            command.CommandText = "insert into AdminTab values (@Username, @Password)";
-            command.ExecuteNonQuery();
+            
+            if(ComparePswValidator.IsValid) 
+            {
+                command.Parameters.AddWithValue("@Username", Username1.Value);
+                command.Parameters.AddWithValue("@Password", Password1.Value);
+                command.CommandText = "insert into AdminTab values (@Username, @Password)";
+                command.ExecuteNonQuery();
+            }
+            else 
+            {
+               
+                    PswError.Visible = true;
+                    PswError.ForeColor = Color.Red;
+                    PswError.Text = ComparePswValidator.ErrorMessage;
+            }
+
+            con.Close();
+
+
+
+
             //if(Password1.Value == Password2.Value && Password1.Value != null)
             //{
             //    command.CommandText = "insert into AdminTab values (@Username, @Password)";

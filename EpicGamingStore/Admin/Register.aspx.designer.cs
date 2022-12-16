@@ -51,6 +51,15 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.HtmlControls.HtmlInputText Username1;
 
         /// <summary>
+        /// Controllo UserNameValidator.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UserNameValidator;
+
+        /// <summary>
         /// Controllo Password.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace EpicGamingStore.Admin
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword Password1;
+
+        /// <summary>
+        /// Controllo PasswordValidator.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordValidator;
 
         /// <summary>
         /// Controllo RipetiPassword.
@@ -87,13 +105,13 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword Password2;
 
         /// <summary>
-        /// Controllo CompareValidator1.
+        /// Controllo ComparePswValidator.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.CompareValidator ComparePswValidator;
 
         /// <summary>
         /// Controllo Invio.
@@ -105,12 +123,12 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.WebControls.Button Invio;
 
         /// <summary>
-        /// Controllo Error.
+        /// Controllo PswError.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Error;
+        protected global::System.Web.UI.WebControls.Label PswError;
     }
 }
