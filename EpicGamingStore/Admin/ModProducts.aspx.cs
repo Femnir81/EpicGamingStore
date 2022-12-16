@@ -48,7 +48,7 @@ namespace EpicGamingStore.Admin
 
             }
         }
-        public static List<Categoria> CatList = new List<Categoria>();
+        public List<Categoria> CatList = new List<Categoria>();
         static string URLImg;
         static string URLImgCopertina;
         static string URLGallery1;
