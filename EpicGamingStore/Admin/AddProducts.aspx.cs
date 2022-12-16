@@ -114,6 +114,7 @@ namespace EpicGamingStore.Admin
 
 
             AddProduct(p, con);
+
             con.Close();
             
 
