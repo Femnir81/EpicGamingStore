@@ -24,7 +24,7 @@
     <div class="d-flex promo justify-content-start py-5 flex-wrap catalog byCat">
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
-                <div class="productCard glass-object repCard">
+                <div class="productCard glass-object m-2">
                     <div class="productImg" style="background-image: url('./assets/img/front/<%# Item.URLImg  %>')"></div>
                     <div class="productDesc p-2">
 
