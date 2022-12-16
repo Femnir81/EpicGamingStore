@@ -48,12 +48,12 @@ namespace EpicGamingStore.Admin
             }
         }
         public static List<Categoria> CatList = new List<Categoria>();
-        string URLImg = "";
-        string URLImgCopertina = "";
-        string URLGallery1 = "";
-        string URLGallery2 = "";
-        string URLGallery3 = "";
-        string URLGallery4 = "";
+        static string URLImg;
+        static string URLImgCopertina;
+        static string URLGallery1;
+        static string URLGallery2;
+        static string URLGallery3;
+        static string URLGallery4;
 
 
         public void GetProduct(int id, SqlConnection connection)
@@ -146,6 +146,11 @@ namespace EpicGamingStore.Admin
             }
 
             PiattaformaSelezionata = PiattaformaSelezionata.Remove(PiattaformaSelezionata.Length - 3, 3);
+            //int inSaldoBit = 0;
+            //if (InSaldo.Checked)
+            //{
+            //    inSaldoBit = 1;
+            //}
 
             int id = Convert.ToInt32(Request.QueryString["idprod"]);
             SqlConnection con = new SqlConnection();
@@ -153,9 +158,17 @@ namespace EpicGamingStore.Admin
             con.Open();
 
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"UPDATE ProdottiTab SET NomeProdotto='{Nome.Value}', DescrizioneProdotto='{Descrizione.Value}' , Piattaforma='{PiattaformaSelezionata}' , PrezzoIntero={Convert.ToDouble(PrezzoIntero.Value)} , PrezzoSaldo= {Convert.ToDouble(PrezzoSaldo.Value)} , InSaldo = {InSaldo.Checked}, Sviluppatore= '{Sviluppatore.Value}' , Publisher='{Publisher.Value}' , DataRilascio= '{DataRilascio.Value}' , URLImg='{URLImg}' , URLImgCopertina='{URLImgCopertina}' , URLGallery1='{URLGallery1}' , URLGallery2='{URLGallery2}' ,URLGallery3='{URLGallery3}' ,URLGallery4='{URLGallery4}' , URLVideoTrailer='{VideoUrl.Value}' , IDCategoria={Convert.ToInt32(DDLCategory.SelectedValue)}  " +
-                $" WHERE IDProdotto= {id}";
+            command.CommandText = $"UPDATE ProdottiTab SET NomeProdotto='{Nome.Value}', DescrizioneProdotto='{Descrizione.Value}', Piattaforma='{PiattaformaSelezionata}', PrezzoIntero={Convert.ToDouble(PrezzoIntero.Value)}, PrezzoSaldo={Convert.ToDouble(PrezzoSaldo.Value)}, InSaldo='{InSaldo.Checked}', Sviluppatore='{Sviluppatore.Value}', Publisher='{Publisher.Value}', DataRilascio='{DataRilascio.Value}', URLImg='{URLImg}', URLImgCopertina='{URLImgCopertina}', URLGallery1='{URLGallery1}', URLGallery2='{URLGallery2}', URLGallery3='{URLGallery3}', URLGallery4='{URLGallery4}', URLVideoTrailer='{VideoUrl.Value}' , IDCategoria={Convert.ToInt32(DDLCategory.SelectedValue)} WHERE IDProdotto={id}";
             command.Connection = con;
+            int row = command.ExecuteNonQuery();
+            if (row > 0)
+            {
+                LabelEX.Text = "Ins Effettuato correttamente!";
+            }
+            else
+            {
+                LabelEX.Text = "Sei uno stronzo";
+            }
 
             con.Close();
         }
