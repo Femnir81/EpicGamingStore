@@ -15,9 +15,12 @@
 
                 <div class="container">
                     <div class="carousel-caption glass-object">
-                        <h1>Example headline.</h1>
-                        <p>Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                        <h1>Offerte Natalizie</h1>
+                        <div class="iconFather">
+                        <img class="carouselIcon" src="./Assets/Img/Utility/santa.png" alt="Santa" />
+                        </div>
+                        <p>Risparmia oltre il 60% sulla nostra speciale selezione di giochi.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -26,9 +29,9 @@
 
                 <div class="container">
                     <div class="carousel-caption glass-object">
-                        <h1>Another example headline.</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        <h1>Football Manager 2023</h1>
+                        <p>Ora disponibile su pc</p>
+                        
                     </div>
                 </div>
             </div>
@@ -37,9 +40,9 @@
 
                 <div class="container">
                     <div class="carousel-caption glass-object ">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        <h1>Monster Hunter</h1>
+                        <p>Tuffati insieme ai tuoi amici nella caccia più sfrenata di sempre! Ora in offerta speciale!</p>
+                        
                     </div>
                 </div>
             </div>
@@ -57,27 +60,31 @@
         <h1 class="ps-5 pb-2 fw-bold">Best Seller</h1>
     <div class="d-flex flex-wrap container-fluid justify-content-center py-2">
         <div class="productCard glass-object m-2">
+            <img src="./Assets/Img/Utility/hot-sale.png" class="onSale" alt="Sale" />
             <div class="productImg1"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Horizon Zero Dawn Complete Edition</p>
-                <p class="PrezzoInt glass-object p-2">50,00 €</p>
-                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
+                <p class="PrezzoInt glass-object p-2">14,99 €</p>
+                <a role="button" href="ProductDetail.aspx?idprodotto=3" class="btn btn-primary btn-sm px-3 py-2">Scopri</a>
             </div>
         </div>
         <div class="productCard glass-object  m-2">
+            <img src="./Assets/Img/Utility/hot-sale.png" class="onSale" alt="Sale" />
             <div class="productImg2"></div>
             <div class="productDesc p-2">
+
                 <p class="mb-1">Crisis Core – Final Fantasy VII - Reunion</p>
-                <p class="PrezzoInt glass-object p-2">50,00 €</p>
-                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
+                <p class="PrezzoInt glass-object p-2">36,99 €</p>
+                <a role="button" href="ProductDetail.aspx?idprodotto=7" class="btn btn-primary btn-sm px-3 py-2">Scopri</a>
             </div>
         </div>
         <div class="productCard glass-object  m-2">
+            <img src="./Assets/Img/Utility/hot-sale.png" class="onSale" alt="Sale" />
             <div class="productImg3"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <p class="PrezzoInt glass-object p-2">80,00 €</p>
-                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
+                <p class="PrezzoInt glass-object p-2">62,29 €</p>
+                <a role="button" href="ProductDetail.aspx?idprodotto=5" class="btn btn-primary btn-sm px-3 py-2">Scopri</a>
             </div>
         </div>
         <div class="productCard glass-object m-2">
@@ -85,7 +92,7 @@
             <div class="productDesc p-2">
                 <p class="mb-1">Xbox Game Pass Ultimate 12 Months</p>
                 <p class="PrezzoInt glass-object p-2">130,00 €</p>
-                <button type="button" class="btn btn-primary btn-sm px-3 py-2">Scopri</button>
+                <a  role="button" href="ProductDetail.aspx?idprodotto=9" class="btn btn-primary btn-sm px-3 py-2">Scopri</a>
             </div>
         </div>
         

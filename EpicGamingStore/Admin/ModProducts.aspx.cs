@@ -168,7 +168,7 @@ namespace EpicGamingStore.Admin
             command.Parameters.AddWithValue("@Descrizione", Descrizione.Value);
             command.Parameters.AddWithValue("@Piattaforma", PiattaformaSelezionata);
             command.Parameters.AddWithValue("@PrezzoInt", Convert.ToDouble(PrezzoIntero.Value));
-            command.Parameters.AddWithValue("@PrezzoSaldo", Convert.ToDouble(PrezzoSaldo.Value);
+            command.Parameters.AddWithValue("@PrezzoSaldo", Convert.ToDouble(PrezzoSaldo.Value));
             command.Parameters.AddWithValue("@InSaldo", InSaldo.Checked);
             command.Parameters.AddWithValue("@Sviluppatore", Sviluppatore.Value);
             command.Parameters.AddWithValue("@Publisher", Publisher.Value);
@@ -187,7 +187,7 @@ namespace EpicGamingStore.Admin
                                                          $"DescrizioneProdotto= @Descrizione, " +
                                                          $"Piattaforma= @Piattaforma, " +
                                                          $"PrezzoIntero= @PrezzoInt, " +
-                                                         $"PrezzoSaldo= @PrezzoSalde, " +
+                                                         $"PrezzoSaldo= @PrezzoSaldo, " +
                                                          $"InSaldo= @InSaldo, " +
                                                          $"Sviluppatore= @Sviluppatore, " +
                                                          $"Publisher= @Publisher, " +

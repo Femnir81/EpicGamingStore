@@ -245,6 +245,16 @@ h3{
     width: 48px;
 
 }
+.iconFather{
+    position:relative;
+}
+.carouselIcon{
+    position:absolute;
+    width:120px;
+    right:25px;
+    top:-65px
+
+}
 
 
 
