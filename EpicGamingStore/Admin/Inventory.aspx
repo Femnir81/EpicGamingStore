@@ -4,13 +4,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="promo">
-        <div class="text-end me-4 my-5 ">
-            <asp:Label ID="Label1" CssClass="fs-5 fw-bold" runat="server" Text=""></asp:Label>
-            <button id="Button1" runat="server" class="btn btn-primary btn-sm px-3 py-2 ms-3" onserverclick="Logout"><i class="fa-solid fa-person-walking-arrow-right"></i></button>
+        <div class="d-flex justify-content-between px-5 me-4 my-5 ">
+            <div>
+                <a href="/Admin/AddProducts.aspx" class="btn btn-success btn-sm mx-1 px-3 ms-4 py-2 adminBtn" role="button"><i class="fa-solid fa-plus"></i></a>
+                <a href="/Admin/Register.aspx" class="btn btn-warning btn-sm mx-1 px-3 py-2 adminBtn" role="button"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="/Admin/Inventory.aspx" class="btn btn-primary btn-sm mx-1 px-3 py-2 adminBtn" role="button"><i class="fa-solid fa-cubes-stacked"></i></a>
+            </div>
+            <div>
+                <asp:Label ID="Label1" CssClass="fs-5 fw-bold" runat="server" Text=""></asp:Label>
+                <button id="Button1" runat="server" class="btn btn-primary btn-sm px-3 py-2 ms-3" onserverclick="Logout"><i class="fa-solid fa-person-walking-arrow-right"></i></button>
+            </div>
         </div>
-
         <div class="container glass-object p-5 mb-5 mt-3">
-            <h1 class="mb-5">Inventario prodotti</h1>
+            <div class="container d-flex justify-content-between">
+                <h1 class="mb-5">Inventario prodotti</h1>
+                <div class="pe-5">
+                </div>
+            </div>
             <asp:Label ID="DeleteMessage" runat="server" Visible="false" Text=""></asp:Label>
             <asp:GridView ID="GrigliaInventario" runat="server" AutoGenerateColumns="false" ItemType="EpicGamingStore.Prodotto" CssClass="table table-borderless">
                 <Columns>
@@ -36,8 +46,8 @@
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <a href="/Admin/ModProducts.aspx?idprod=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm mx-1 px-3 py-2" role="button">Modifica</a>
-                            <asp:Button ID="Elimina" runat="server" Text="Elimina" CssClass="btn btn-danger btn-sm mx-1 px-3 py-2" OnClick="Elimina_Click" CommandArgument="<%# Item.IDProdotto %>" />
+                            <a href="/Admin/ModProducts.aspx?idprod=<%# Item.IDProdotto %>" class="btn w-btn btn-primary btn-sm mx-1 px-3 py-2" role="button">Modifica</a>
+                            <asp:Button ID="Elimina" runat="server" Text="Elimina" CssClass="btn btn-danger w-btn btn-sm mx-1 px-3 py-2" OnClick="Elimina_Click" CommandArgument="<%# Item.IDProdotto %>" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

@@ -28,8 +28,8 @@
         <div class="d-flex flex-column CartDetail justify-content-end align-items-end ">
             <asp:Label ID="SommaArticoli" runat="server" Text="" CssClass="mb-3 fs-3" Font-Bold="true"></asp:Label>
             <div class="">
-            <asp:Button ID="Button2" runat="server" Text="Checkout" CssClass="btn btn-primary me-1 "  />
-            <asp:Button ID="BottoneCancella" runat="server" Text="Svuota il carrello" CssClass="btn btn-danger me-1 " OnClick="SvuotaCarrello" />
+            <asp:Button ID="Button2" runat="server" Text="Checkout" CssClass="btn w-btn btn-primary me-1 "  />
+            <asp:Button ID="BottoneCancella" runat="server" Text="Svuota il carrello" CssClass="btn w-btn btn-danger me-1 " OnClick="SvuotaCarrello" />
             </div>
         </div>
     </div>

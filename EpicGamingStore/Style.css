@@ -54,7 +54,9 @@ body {
 .btn-primary {
     background-color: #8187DC;
     border: 0;
-    
+}
+.w-btn{
+    min-width: 150px;
 }
 #sort {
     background-color: #222222;
@@ -220,5 +222,10 @@ h3{
 .input {
     border: 2px solid #8187DC
 }
+.adminBtn{
+    width: 48px;
+
+}
+
 
 

@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,6 +15,7 @@ namespace EpicGamingStore.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = $"Utente Loggato: {User.Identity.Name}";
             foreach (ListItem item in CheckBoxPiattaforma.Items)
             {
                 item.Attributes.Add("style", "margin-bottom:25px, margin-left:10px"); 
@@ -46,6 +48,11 @@ namespace EpicGamingStore.Admin
             }
         }
         public static List<Categoria> CatList = new List<Categoria>() ;
+        protected void Logout(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Response.Redirect(FormsAuthentication.LoginUrl);
+        }
 
         protected void Aggiungi_Click(object sender, EventArgs e)
         {

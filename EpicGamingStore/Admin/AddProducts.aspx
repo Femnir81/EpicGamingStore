@@ -3,6 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="promo">
+         <div class="d-flex justify-content-between px-5 me-4 my-5 ">
+            <div>
+                <a href="/Admin/AddProducts.aspx" class="btn btn-success btn-sm mx-1 px-3 ms-4 py-2 adminBtn" role="button"><i class="fa-solid fa-plus"></i></a>
+                <a href="/Admin/Register.aspx" class="btn btn-warning btn-sm mx-1 px-3 py-2 adminBtn" role="button"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="/Admin/Inventory.aspx" class="btn btn-primary btn-sm mx-1 px-3 py-2 adminBtn" role="button"><i class="fa-solid fa-cubes-stacked"></i></a>
+            </div>
+            <div>
+                <asp:Label ID="Label1" CssClass="fs-5 fw-bold" runat="server" Text=""></asp:Label>
+                <button id="Button1" runat="server" class="btn btn-primary btn-sm px-3 py-2 ms-3" onserverclick="Logout"><i class="fa-solid fa-person-walking-arrow-right"></i></button>
+            </div>
+        </div>
     <div class="container p-5 d-flex justify-content-center">
     <div class="d-flex flex-wrap addWindow p-5 glass-object">
         <div class="addForm">
