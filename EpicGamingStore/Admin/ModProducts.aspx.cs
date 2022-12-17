@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -83,12 +84,20 @@ namespace EpicGamingStore.Admin
                             cb.Selected= true;
                         }
                     }
-                    PrezzoIntero.Value = reader["PrezzoIntero"].ToString();
-                    PrezzoSaldo.Value = reader["PrezzoSaldo"].ToString();
+                    PrezzoIntero.Value = Convert.ToDouble(reader["PrezzoIntero"].ToString()).ToString("0.00");  //Formattazione per la doppia cifra decimale
+                    PrezzoSaldo.Value = Convert.ToDouble(reader["PrezzoSaldo"].ToString()).ToString("0.00");
                     InSaldo.Checked = Convert.ToBoolean(reader["InSaldo"]);
                     Sviluppatore.Value = reader["Sviluppatore"].ToString();
                     Publisher.Value = reader["Publisher"].ToString();
-                    DataRilascio.Value = Convert.ToDateTime(reader["DataRilascio"]).ToString("yyyy-MM-dd");
+                    //DataRilascio.Value = Convert.ToDateTime(reader["DataRilascio"]).ToString("yyyy-MM-dd");
+
+                    if (reader["DataRilascio"] != DBNull.Value) 
+                    {
+                        DataRilascio.Value = Convert.ToDateTime(reader["DataRilascio"]).ToString("yyyy-MM-dd");
+                    }
+                  
+                    //DataRilascio.Value = Convert.ToDateTime(reader["DataRilascio"]).ToString("yyyy-MM-dd");
+
                     URLImg = reader["URLImg"].ToString();
                     URLImgCopertina = reader["URLImgCopertina"].ToString();
                     URLGallery1 = reader["URLGallery1"].ToString();
@@ -172,7 +181,14 @@ namespace EpicGamingStore.Admin
             command.Parameters.AddWithValue("@InSaldo", InSaldo.Checked);
             command.Parameters.AddWithValue("@Sviluppatore", Sviluppatore.Value);
             command.Parameters.AddWithValue("@Publisher", Publisher.Value);
-            command.Parameters.AddWithValue("@DataRilascio", DataRilascio.Value);
+            if(Convert.ToInt32(DDLCategory.SelectedValue) != 7) {
+                command.Parameters.AddWithValue("@DataRilascio", DataRilascio.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@DataRilascio", DBNull.Value);
+            }
+            //command.Parameters.AddWithValue("@DataRilascio", DataRilascio.Value);
             command.Parameters.AddWithValue("@FrontImg", URLImg);
             command.Parameters.AddWithValue("@CoverImg",URLImgCopertina);
             command.Parameters.AddWithValue("@Gallery1", URLGallery1);
