@@ -83,7 +83,7 @@
             <div class="productImg3"></div>
             <div class="productDesc p-2">
                 <p class="mb-1">Call of Duty: Modern Warfare II</p>
-                <p class="PrezzoInt glass-object p-2">62,29 €</p>
+                <p class="PrezzoInt text-black glass-object p-2">62,29 €</p>
                 <a role="button" href="ProductDetail.aspx?idprodotto=5" class="btn btn-primary btn-sm px-3 py-2">Scopri</a>
             </div>
         </div>

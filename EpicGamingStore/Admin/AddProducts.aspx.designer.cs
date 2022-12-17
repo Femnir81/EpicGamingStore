@@ -33,6 +33,15 @@ namespace EpicGamingStore.Admin
         protected global::System.Web.UI.HtmlControls.HtmlButton Button1;
 
         /// <summary>
+        /// Controllo LabelEX.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelEX;
+
+        /// <summary>
         /// Controllo Nome.
         /// </summary>
         /// <remarks>
@@ -193,14 +202,5 @@ namespace EpicGamingStore.Admin
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Add;
-
-        /// <summary>
-        /// Controllo LabelEX.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelEX;
     }
 }

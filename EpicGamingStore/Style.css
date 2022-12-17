@@ -50,6 +50,15 @@ body {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color:whitesmoke
 }
+.glass-object-success {
+    background: rgba( 21, 115, 71, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: whitesmoke
+}
 
 .btn-primary {
     background-color: #8187DC;
@@ -150,10 +159,10 @@ body {
     position: absolute;
     right: 10px;
     top: -55px;
-    color: whitesmoke;
+    color: black;
+    text-shadow: 0px 0px 4px #ddbdfc;
     font-weight: bold;
-    font-style:oblique
-    
+    font-style: oblique
 }
 
 

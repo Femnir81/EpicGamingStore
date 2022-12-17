@@ -14,8 +14,12 @@
                 <button id="Button1" runat="server" class="btn btn-primary btn-sm px-3 py-2 ms-3" onserverclick="Logout"><i class="fa-solid fa-person-walking-arrow-right"></i></button>
             </div>
         </div>
-    <div class="container p-5 d-flex justify-content-center">
-    <div class="d-flex flex-wrap addWindow p-5 glass-object">
+    <div class="container p-5 d-flex flex-column align-content-center justify-content-center">
+        
+        <div class="text-center">
+        <asp:Label ID="LabelEX" CssClass="fs-2 mb-5 fw-bold" runat="server" Text=""></asp:Label>
+        </div>
+    <div class="d-flex flex-wrap mx-auto justify-content-center addWindow p-5 glass-object">
         <h1 class="w-100 mb-4 fw-bold headings">Aggiungi prodotto</h1>
         <div class="addForm">
         <h3 class="fw-bold">Nome prodotto</h3>
@@ -88,7 +92,7 @@
 
     
     </div>
-    <asp:Label ID="LabelEX" runat="server" Text=""></asp:Label>
+    
     </div>
     
 </asp:Content>
