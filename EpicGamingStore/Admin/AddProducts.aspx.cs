@@ -60,8 +60,8 @@ namespace EpicGamingStore.Admin
             Prodotto p = new Prodotto();
             p.NomeProdotto = Nome.Value;
             p.DescrizioneProdotto = Descrizione.Value;
-            p.PrezzoIntero = Convert.ToInt32(PrezzoIntero.Value);
-            p.PrezzoSaldo = Convert.ToInt32(PrezzoSaldo.Value);
+            p.PrezzoIntero = Convert.ToDouble(PrezzoIntero.Value);
+            p.PrezzoSaldo = Convert.ToDouble(PrezzoSaldo.Value);
             p.Sviluppatore = Sviluppatore.Value;
             p.Publisher = Publisher.Value;
             p.DataRilascio = DataRilascio.Value;
@@ -181,7 +181,7 @@ namespace EpicGamingStore.Admin
                     LabelEX.Text = "Inserimento non riuscito.";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 LabelEX.Text = ex.Message;
             }
@@ -189,7 +189,7 @@ namespace EpicGamingStore.Admin
             {
                 Nome.Value = "";
                 Descrizione.Value = "";
-                foreach(ListItem cb in CheckBoxPiattaforma.Items)
+                foreach (ListItem cb in CheckBoxPiattaforma.Items)
                 {
                     cb.Selected = false;
                 }
@@ -210,9 +210,9 @@ namespace EpicGamingStore.Admin
 
 
             }
-                
-               
-               
+
+
+
 
         }
     }
