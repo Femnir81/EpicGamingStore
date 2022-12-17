@@ -37,13 +37,15 @@
             </asp:ContentPlaceHolder>
         </div>
         <div class="fatFoot">
-            <footer class="d-flex footer flex-wrap justify-content-between align-items-center py-3 ">
-                <div class="col-md-4 d-flex align-items-center">
+            <footer class="d-flex footer flex-wrap align-items-center py-3 ">
+                <div class="col-md-3 d-flex align-items-center">
                 
                     <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Epic Gaming, Inc</span>
                 </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <div class="col-md-6 text-center">
+                    <span class="mb-3 mb-md-0 text-muted">Team: Luca Senatore, Cristiano Aliotta, Roberto Dabbicco, Andrea Savignano, Dimitri Lazuka. </span>
+                </div>
+                <ul class="nav col-md-3 justify-content-end list-unstyled d-flex">
                     <li class="ms-3"><a class="footer-link" href="#">
                         <i class="fa-brands fa-twitter"></i></a></li>
                     <li class="ms-3"><a class="footer-link" href="#">
