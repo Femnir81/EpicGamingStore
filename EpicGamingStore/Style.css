@@ -65,7 +65,7 @@ body {
     border: 0;
 }
 .w-btn{
-    min-width: 150px;
+    min-width: 100px;
 }
 #sort {
     background-color: #222222;

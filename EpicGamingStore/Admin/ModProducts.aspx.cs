@@ -129,27 +129,27 @@ namespace EpicGamingStore.Admin
             if (CoverUpload.HasFile)
             {
                 URLImgCopertina = CoverUpload.FileName;
-               CoverUpload.SaveAs(Server.MapPath("~/Assets/img/front/" + URLImgCopertina));
+               CoverUpload.SaveAs(Server.MapPath("~/Assets/img/copertina/" + URLImgCopertina));
             }
             if (Gallery1.HasFile)
             {
                 URLGallery1 = Gallery1.FileName;
-                Gallery1.SaveAs(Server.MapPath("~/Assets/img/front/" + URLGallery1));
+                Gallery1.SaveAs(Server.MapPath("~/Assets/img/gallery/" + URLGallery1));
             }
             if (Gallery2.HasFile)
             {
                 URLGallery2 = Gallery2.FileName;
-                Gallery2.SaveAs(Server.MapPath("~/Assets/img/front/" + URLGallery2));
+                Gallery2.SaveAs(Server.MapPath("~/Assets/img/gallery/" + URLGallery2));
             }
             if (Gallery3.HasFile)
             {
                 URLGallery3 = Gallery3.FileName;
-                Gallery3.SaveAs(Server.MapPath("~/Assets/img/front/" + URLGallery3));
+                Gallery3.SaveAs(Server.MapPath("~/Assets/img/gallery/" + URLGallery3));
             }
             if (Gallery4.HasFile)
             {
                 URLGallery4 = Gallery4.FileName;
-                Gallery4.SaveAs(Server.MapPath("~/Assets/img/front/" + URLGallery4));
+                Gallery4.SaveAs(Server.MapPath("~/Assets/img/gallery/" + URLGallery4));
             }
 
             foreach (ListItem cb in CheckBoxPiattaforma.Items)

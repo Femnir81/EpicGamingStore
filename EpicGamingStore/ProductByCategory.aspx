@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="d-flex promo justify-content-start py-5 sortByCat  flex-wrap catalog byCat">
+    <div class="d-flex promo justify-content-center py-5 sortByCat  flex-wrap catalog byCat">
         <asp:Repeater ID="Repeater1" runat="server" ItemType="EpicGamingStore.Prodotto">
             <ItemTemplate>
                 <div class="productCard glass-object m-2">
