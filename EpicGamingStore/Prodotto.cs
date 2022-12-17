@@ -117,18 +117,19 @@ namespace EpicGamingStore
             int row = command.ExecuteNonQuery();
             con.Close();
         }
-        public double GetPrice()
+        public string GetPrice()
         {
             if (InSaldo)
             {
-                return PrezzoSaldo;
+                return PrezzoSaldo.ToString("c2");
             }
             else
             {
-                return PrezzoIntero;
+                return PrezzoIntero.ToString("c2");
             }
         } 
 
+       
       
     }
 }

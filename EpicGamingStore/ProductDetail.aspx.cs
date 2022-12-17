@@ -33,7 +33,7 @@ namespace EpicGamingStore
                     {
                     dataUscita.Text = $"Data Rilascio: {p.DataRilascio.ToString()}";
                     }
-                    prezzo.Text = p.GetPrice().ToString("c2");
+                    prezzo.Text = p.GetPrice();
                     descrizione.Text = p.DescrizioneProdotto.ToString();    
                     gallery1.ImageUrl = $"~/assets/img/gallery/{p.URLGallery1.ToString()}";
                     gallery2.ImageUrl = $"~/assets/img/gallery/{p.URLGallery2.ToString()}";

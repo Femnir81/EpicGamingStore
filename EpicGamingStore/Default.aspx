@@ -126,7 +126,7 @@
 
                         <asp:Label ID="Label2" CssClass="mb-2" runat="server" Text="<%# Item.NomeProdotto %>"></asp:Label> <br />
                         
-                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.GetPrice().ToString("c2") %></p>
+                        <p ID="Label3" class="PrezzoInt glass-object p-2" runat="server"><%# Item.GetPrice() %></p>
                         <a href="ProductDetail.aspx?idprodotto=<%# Item.IDProdotto %>" class="btn btn-primary btn-sm px-3 py-2 mt-2 ms-3" role="button">scopri</a>
                     </div>
                 </div>

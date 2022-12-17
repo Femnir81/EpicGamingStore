@@ -84,8 +84,8 @@ namespace EpicGamingStore.Admin
                             cb.Selected= true;
                         }
                     }
-                    PrezzoIntero.Value = Convert.ToDouble(reader["PrezzoIntero"].ToString()).ToString("0.00");  //Formattazione per la doppia cifra decimale
-                    PrezzoSaldo.Value = Convert.ToDouble(reader["PrezzoSaldo"].ToString()).ToString("0.00");
+                    PrezzoIntero.Value = Convert.ToDouble(reader["PrezzoIntero"]).ToString("0.00");  //Formattazione per la doppia cifra decimale
+                    PrezzoSaldo.Value = Convert.ToDouble(reader["PrezzoSaldo"]).ToString("0.00");
                     InSaldo.Checked = Convert.ToBoolean(reader["InSaldo"]);
                     Sviluppatore.Value = reader["Sviluppatore"].ToString();
                     Publisher.Value = reader["Publisher"].ToString();
